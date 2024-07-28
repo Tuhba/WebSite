@@ -1,0 +1,41 @@
+﻿
+@{
+    Layout = null;
+}
+
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Giriş</title>
+    <link rel="stylesheet" href="~/web-AdminLogin/style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="contact-form">
+            <img src="~/web-AdminLogin/img/jpadminLogin.jpg" class="admin-img">
+            <h2>Admin Giriş</h2>
+
+            @using (Html.BeginForm("Index", "Login", FormMethod.Post))
+            {
+                <div class="txtb">
+                    <input type="text" name="kullaniciAdi" placeholder="Kullanıcı Adı">
+                </div>
+                <div class="txtb">
+                    <input type="password" name="sifre" placeholder="Şifre">
+                </div>
+                <div>
+                    <input type="submit" class="logbtn" value="Giriş">
+                </div>
+            }
+
+        </div>
+    </div>
+</body>
+</html>

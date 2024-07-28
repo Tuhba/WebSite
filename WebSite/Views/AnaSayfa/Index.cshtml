@@ -1,0 +1,49 @@
+﻿@using WebSite.Models.Siniflar
+@model List<AnaSayfa>
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tuğba'nın Web Sitesi</title>
+    <link rel="stylesheet" href="~/web-WebSite/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&family=Roboto:wght@400;700&display=swap"
+          rel="stylesheet">
+
+</head>
+
+<body>
+    <div class="center">
+        <div class="avatar">
+
+            @foreach (var x in Model)
+            {
+                <img src="@x.profil">
+            }
+
+
+        </div>
+        <div class="content">
+            @foreach (var x in Model)
+            {
+                <h1><b>@x.isim</b></h1>
+                <h2>@x.unvan</h2>
+                <p>
+                  @x.aciklama
+                </p>
+                <h3>@x.iletisim</h3>
+            }
+
+        </div>
+        @Html.Action("icon", "AnaSayfa")
+    </div>
+
+</body>
+
+</html>
